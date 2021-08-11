@@ -2,13 +2,11 @@ public class main {
     public static void main (String[] args){
 
 
+        double weightInPounds=200;
 
-       int totalNums= addingNums(10,20,30);
+        double weightInKilo= weightInPounds/2.2046;
 
-       int anotherNum=200;
-
-        System.out.println(totalNums);
-
+        System.out.println(weightInKilo);
 
 
 
