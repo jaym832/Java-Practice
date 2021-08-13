@@ -2,11 +2,27 @@ public class main {
     public static void main (String[] args){
 
 
-        double weightInPounds=200;
+       double num1= 20.00;
+       double num2=80.00;
 
-        double weightInKilo= weightInPounds/2.2046;
+       double sumOfNumsAndMultiply=(num1+num2)*100;
 
-        System.out.println(weightInKilo);
+        System.out.println("My Values total "+sumOfNumsAndMultiply);
+
+       double remainderOfNums=sumOfNumsAndMultiply%40.00;
+
+        System.out.println("remainder "+remainderOfNums);
+
+        boolean isNoRemainder=(remainderOfNums==0)?true:false;
+
+        System.out.println(isNoRemainder);
+
+        if(!isNoRemainder){
+            System.out.println("Got some remainder");
+        }
+
+
+
 
 
 
@@ -14,10 +30,7 @@ public class main {
 
 }
 
-public static int addingNums(int num1,int num2,int num3){
-        int myTotal=num1+num2+num3;
-        return myTotal;
-}
+
 
 
 }
