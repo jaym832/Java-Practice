@@ -28,7 +28,7 @@ public class main {
        //highscore challenge
        // have 2 methods that 1: displays the name and the position from score
        // method 2 is going to calculate the position based on score
-        int score = calculateHighScorePosition(1500);
+        int score = calculateHighScorePosition(1000);
         displayHighScorePosition("javier", score);
 
          score = calculateHighScorePosition(900);
@@ -52,11 +52,11 @@ public class main {
 
     public static int calculateHighScorePosition(int score) {
         int position;
-        if (score > 1000) {
+        if (score >=1000) {
             position = 1;
-        } else if (score > 500 && score < 1000) {
+        } else if (score >=500 && score < 1000) {
             position = 2;
-        } else if (score > 100 && score < 500) {
+        } else if (score >= 100 && score < 500) {
             position = 3;
         } else position = 4;
 
