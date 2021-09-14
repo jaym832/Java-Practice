@@ -1,67 +1,49 @@
 public class main {
     public static void main(String[] args) {
 
+    getDurationString(65,45);
 
-//       double num1= 20.00;
-//       double num2=80.00;
-//
-//       double sumOfNumsAndMultiply=(num1+num2)*100;
-//
-//        System.out.println("My Values total "+sumOfNumsAndMultiply);
-//
-//       double remainderOfNums=sumOfNumsAndMultiply%40.00;
-//
-//        System.out.println("remainder "+remainderOfNums);
-//
-//        boolean isNoRemainder=(remainderOfNums==0)?true:false;
-//
-//        System.out.println(isNoRemainder);
-//
-//        if(!isNoRemainder){
-//            System.out.println("Got some remainder");
-//        }
-
-        //testing
-
-//////////////////////////////////////////////////////////////////////////////////
-
-       //highscore challenge
-       // have 2 methods that 1: displays the name and the position from score
-       // method 2 is going to calculate the position based on score
-        int score = calculateHighScorePosition(1000);
-        displayHighScorePosition("javier", score);
-
-         score = calculateHighScorePosition(900);
-        displayHighScorePosition("bob", score);
-
-        score = calculateHighScorePosition(400);
-        displayHighScorePosition("sally", score);
-
-        score = calculateHighScorePosition(50);
-        displayHighScorePosition("mary", score);
-
-
-
-
+    getDurationString(40);
 
     }
 
-    public static void displayHighScorePosition(String playerName, int position) {
-        System.out.println(playerName + " managed to get into " + position + " place");
+
+    public static void getDurationString(int mins,int secs){
+        int hours=0;
+        if(mins>=0&&secs>=0){
+            if(secs<=59){
+
+                if(mins>=60){
+                     hours=mins/60;
+                     mins=mins%60;
+                    System.out.println(hours+" h "+mins+" m "+secs+" s ");
+                }else{
+                    System.out.println(hours+" h "+mins+" m "+secs+" s ");
+                }
+
+
+            }else{
+                System.out.println("Invalid value");
+            }
+        }
     }
 
-    public static int calculateHighScorePosition(int score) {
-        int position;
-        if (score >=1000) {
-            position = 1;
-        } else if (score >=500 && score < 1000) {
-            position = 2;
-        } else if (score >= 100 && score < 500) {
-            position = 3;
-        } else position = 4;
 
-        return position;
+    public static void getDurationString(int secs){
+        int mins=0;
+        if(secs>=0){
+            if(secs>=60){
+                mins=secs/60;
+                secs=secs%60;
+                getDurationString(mins,secs);
+            }
+            else{
+                getDurationString(mins,secs);
+            }
+        }
+        else{
+            System.out.println("Invalid value");
+        }
     }
-
 
 }
