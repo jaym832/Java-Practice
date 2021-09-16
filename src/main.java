@@ -66,7 +66,7 @@ public class main {
 //        }
 //    }
 
-
+// update check
     public static void printYearsAndDays(long mins){
         if(mins>=60){
             long hours= mins/60;
